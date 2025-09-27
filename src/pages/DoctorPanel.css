@@ -1,0 +1,152 @@
+.doctor-panel-page {
+  padding-bottom: var(--spacing-8);
+}
+
+.doctor-stats {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.stat-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+  border-radius: var(--border-radius-2xl);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.patient-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-left: 4px solid var(--secondary-500);
+}
+
+.patient-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.patient-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-4);
+}
+
+.patient-name {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-1);
+}
+
+.patient-details {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  text-transform: capitalize;
+}
+
+.patient-vitals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: var(--spacing-3);
+}
+
+.vital-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.vital-label {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  font-weight: 600;
+}
+
+.vital-value {
+  font-size: var(--font-size-sm);
+  color: var(--gray-800);
+  font-weight: 500;
+}
+
+.patient-details-container {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+}
+
+.patient-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-6);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.patient-details-header h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.patient-info-grid {
+  display: grid;
+  gap: var(--spacing-3);
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-2) 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.info-label {
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.info-value {
+  color: var(--gray-800);
+  text-align: right;
+}
+
+.back-navigation {
+  margin-bottom: var(--spacing-6);
+}
+
+.prescription-form {
+  padding: var(--spacing-6);
+}
+
+@media (max-width: 767px) {
+  .patient-details-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-4);
+  }
+  
+  .patient-vitals {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    gap: var(--spacing-1);
+  }
+  
+  .info-value {
+    text-align: left;
+  }
+}

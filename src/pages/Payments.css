@@ -1,0 +1,140 @@
+.payments-page {
+  padding-bottom: var(--spacing-8);
+}
+
+.payment-summary {
+  grid-column: span 1;
+}
+
+.payment-history {
+  grid-column: span 2;
+}
+
+.summary-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-3);
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius-md);
+}
+
+.summary-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.summary-value {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.summary-value.text-warning {
+  color: var(--warning-600);
+}
+
+.payment-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.payment-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--spacing-4);
+  align-items: center;
+  padding: var(--spacing-4);
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.2s ease;
+}
+
+.payment-item:hover {
+  background-color: var(--gray-100);
+}
+
+.payment-description {
+  font-weight: 500;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-1);
+}
+
+.payment-date {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.payment-amount {
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  color: var(--gray-800);
+}
+
+.payment-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.payment-status-icon {
+  color: var(--secondary-500);
+}
+
+.payment-form {
+  padding: var(--spacing-6);
+}
+
+.payment-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--spacing-6) 0;
+  position: relative;
+}
+
+.payment-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--gray-200);
+}
+
+.payment-divider span {
+  background: white;
+  padding: 0 var(--spacing-4);
+  color: var(--gray-500);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+@media (max-width: 1023px) {
+  .payment-summary,
+  .payment-history {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .payment-item {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2);
+    text-align: center;
+  }
+  
+  .payment-actions {
+    justify-content: center;
+  }
+}

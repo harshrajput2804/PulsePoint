@@ -1,0 +1,157 @@
+.reports-page {
+  padding-bottom: var(--spacing-8);
+}
+
+.report-controls {
+  grid-column: span 1;
+}
+
+.report-preview-container {
+  grid-column: span 2;
+}
+
+.report-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-4);
+}
+
+.stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius-md);
+}
+
+.stat-item svg {
+  color: var(--primary-600);
+}
+
+.stat-value {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.report-preview {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-6);
+  background: white;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.report-header {
+  text-align: center;
+  padding-bottom: var(--spacing-4);
+  border-bottom: 2px solid var(--primary-600);
+  margin-bottom: var(--spacing-6);
+}
+
+.report-header h2 {
+  color: var(--primary-600);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-3);
+}
+
+.report-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.report-section {
+  margin-bottom: var(--spacing-6);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.report-section h3 {
+  color: var(--primary-700);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-4);
+}
+
+.vitals-summary,
+.medications-summary,
+.appointments-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.vital-row,
+.medication-row,
+.appointment-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-4);
+  padding: var(--spacing-2);
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.vital-date,
+.appointment-date {
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.medication-name {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.medication-details,
+.appointment-specialty {
+  color: var(--gray-600);
+}
+
+@media print {
+  .report-preview {
+    box-shadow: none;
+    border: none;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 1023px) {
+  .report-controls,
+  .report-preview-container {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .report-actions {
+    flex-direction: column;
+  }
+  
+  .vital-row,
+  .medication-row,
+  .appointment-row {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-1);
+  }
+}

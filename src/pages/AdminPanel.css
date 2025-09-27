@@ -1,0 +1,180 @@
+.admin-panel-page {
+  padding-bottom: var(--spacing-8);
+}
+
+.admin-stat-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  transition: all 0.2s ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--border-radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.admin-stat-primary .stat-icon {
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+}
+
+.admin-stat-success .stat-icon {
+  background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
+}
+
+.admin-stat-secondary .stat-icon {
+  background: linear-gradient(135deg, var(--primary-400), var(--secondary-500));
+}
+
+.admin-stat-accent .stat-icon {
+  background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-1);
+}
+
+.stat-title {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.users-table {
+  overflow-x: auto;
+}
+
+.user-cell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.user-name {
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.user-email {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+}
+
+.role-badge {
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-2xl);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role-patient {
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+}
+
+.role-doctor {
+  background-color: var(--secondary-100);
+  color: var(--secondary-800);
+}
+
+.role-admin {
+  background-color: var(--accent-100);
+  color: var(--accent-800);
+}
+
+.status-active {
+  background-color: var(--secondary-100);
+  color: var(--secondary-800);
+}
+
+.status-suspended {
+  background-color: var(--error-100);
+  color: var(--error-800);
+}
+
+.activity-logs {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.activity-log-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--spacing-3);
+  border-bottom: 1px solid var(--gray-100);
+  transition: background-color 0.2s ease;
+}
+
+.activity-log-item:hover {
+  background-color: var(--gray-50);
+}
+
+.log-content {
+  flex: 1;
+}
+
+.log-action {
+  font-weight: 500;
+  color: var(--gray-800);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-1);
+}
+
+.log-details {
+  font-size: var(--font-size-xs);
+  color: var(--gray-600);
+}
+
+.log-timestamp {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+.prescription-form {
+  padding: var(--spacing-6);
+}
+
+@media (max-width: 767px) {
+  .admin-stat-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .activity-log-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-2);
+  }
+  
+  .log-timestamp {
+    text-align: left;
+  }
+}

@@ -1,0 +1,126 @@
+.profile-page {
+  padding-bottom: var(--spacing-8);
+}
+
+.edit-actions {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.profile-overview {
+  grid-column: span 1;
+}
+
+.profile-details {
+  grid-column: span 1;
+}
+
+.medical-details {
+  grid-column: span 1;
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+  border-radius: 50%;
+  margin: 0 auto var(--spacing-4);
+  color: white;
+}
+
+.profile-basic-info {
+  text-align: center;
+}
+
+.profile-basic-info h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-2);
+}
+
+.profile-role {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-3);
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+  border-radius: var(--border-radius-2xl);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: var(--spacing-4);
+}
+
+.profile-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.profile-value {
+  padding: var(--spacing-3);
+  background-color: var(--gray-50);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+  color: var(--gray-700);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.health-summary-text {
+  color: var(--gray-700);
+  line-height: 1.6;
+  background-color: var(--gray-50);
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius-md);
+}
+
+@media (max-width: 1023px) {
+  .profile-overview,
+  .profile-details,
+  .medical-details {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .edit-actions {
+    flex-direction: column;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .stat-item {
+    justify-content: center;
+  }
+}

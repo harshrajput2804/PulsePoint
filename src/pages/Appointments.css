@@ -1,0 +1,148 @@
+.appointments-page {
+  padding-bottom: var(--spacing-8);
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.appointment-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+  border-left: 4px solid var(--primary-500);
+}
+
+.appointment-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.appointment-card.past {
+  opacity: 0.7;
+  border-left-color: var(--gray-400);
+}
+
+.appointment-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-4);
+}
+
+.doctor-name {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-1);
+}
+
+.doctor-specialty {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.appointment-type-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+  border-radius: var(--border-radius-2xl);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+.appointment-details {
+  margin-bottom: var(--spacing-4);
+}
+
+.appointment-datetime {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
+}
+
+.datetime-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  color: var(--gray-600);
+  font-size: var(--font-size-sm);
+}
+
+.appointment-reason {
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+  margin-bottom: var(--spacing-2);
+}
+
+.appointment-location {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.appointment-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-sm {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-xs);
+}
+
+.radio-group {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
+.radio-option input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-600);
+}
+
+.appointment-form {
+  padding: var(--spacing-6);
+}
+
+@media (max-width: 767px) {
+  .appointment-header {
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+  
+  .appointment-datetime {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .appointment-status {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-3);
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+}

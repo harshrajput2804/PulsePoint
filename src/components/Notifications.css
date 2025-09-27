@@ -1,0 +1,108 @@
+.notifications-container {
+  position: fixed;
+  top: 80px;
+  right: var(--spacing-4);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  max-width: 400px;
+}
+
+/* Adjust for sidebar on desktop */
+@media (min-width: 768px) {
+  .notifications-container {
+    right: var(--spacing-6);
+  }
+}
+
+.notification {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  border-left: 4px solid;
+  animation: slideIn 0.3s ease-out;
+}
+
+.notification-info {
+  border-left-color: var(--primary-500);
+}
+
+.notification-success {
+  border-left-color: var(--secondary-500);
+}
+
+.notification-warning {
+  border-left-color: var(--warning-500);
+}
+
+.notification-error {
+  border-left-color: var(--error-500);
+}
+
+.notification-content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  flex: 1;
+}
+
+.notification-icon {
+  margin-top: 2px;
+}
+
+.notification-info .notification-icon {
+  color: var(--primary-500);
+}
+
+.notification-success .notification-icon {
+  color: var(--secondary-500);
+}
+
+.notification-warning .notification-icon {
+  color: var(--warning-500);
+}
+
+.notification-error .notification-icon {
+  color: var(--error-500);
+}
+
+.notification-title {
+  font-weight: 600;
+  color: var(--gray-800);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-1);
+}
+
+.notification-message {
+  color: var(--gray-600);
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  cursor: pointer;
+  padding: var(--spacing-1);
+  border-radius: var(--border-radius-sm);
+  transition: color 0.2s ease;
+}
+
+.notification-close:hover {
+  color: var(--gray-600);
+}
+
+@media (max-width: 767px) {
+  .notifications-container {
+    left: var(--spacing-4);
+    right: var(--spacing-4);
+    max-width: none;
+  }
+}

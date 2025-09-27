@@ -1,0 +1,16 @@
+/* Import all component styles */
+@import url('./components/Navbar.css');
+@import url('./components/Notifications.css');
+@import url('./pages/Login.css');
+@import url('./pages/Dashboard.css');
+@import url('./pages/Vitals.css');
+@import url('./pages/Medications.css');
+@import url('./pages/Appointments.css');
+@import url('./pages/Profile.css');
+@import url('./pages/MedicalRecords.css');
+@import url('./pages/Reports.css');
+@import url('./pages/DoctorPanel.css');
+@import url('./pages/AdminPanel.css');
+@import url('./pages/Payments.css');
+
+/* Global styles are already defined in App.css */
